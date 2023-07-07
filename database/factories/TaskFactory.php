@@ -20,7 +20,7 @@ class TaskFactory extends Factory
             'title' => fake()->words(asText:  true),
             'description' => fake()->sentences(2, true),
             'status' => fake()->randomElement(['done', 'todo', 'in_progress']),
-            'deadline' => fake()->dateTimeThisMonth(),
+            'deadline' => fake()->dateTimeThisMonth()->format('d-m-Y'),
         ];
     }
 }
